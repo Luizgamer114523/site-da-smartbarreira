@@ -10,7 +10,10 @@ def buscar_exames() -> pd.DataFrame:
 st.set_page_config(page_title="SmartBarreira", page_icon="💧")
 
 st.title("Painel da SmartBarreira")
+st.markdown('<meta http-equiv="refresh" content="30">', unsafe_allow_html=True)
+
 tabela = buscar_exames()
+
 if tabela.empty:
     st.info("Ainda nao chegaram exames da agua...")
 else:
@@ -18,7 +21,7 @@ else:
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("pH", f"{ultimo['ph']:.1f}")
     c2.metric("Turbidez", f"{ultimo['turbidez']}")
-    c3.metric("TDS", f"{ultimo['tds']} ppm")
+    c3.metric("Qualidade da Agua", f"{ultimo['tds']} ppm")
     c4.metric("Temperatura", f"{ultimo['temperatura']} C")
     
 st.subheader("Historico do pH")
