@@ -19,7 +19,11 @@ if tabela.empty:
 else:
     tabela["criado_em"] = pd.to_datetime(tabela["criado_em"], errors="coerce")
     tabela = tabela.dropna(subset=["criado_em"]).sort_values("criado_em")
-    tabela["criado_em"] = tabela["criado_em"].dt.tz_convert("America/Recife").dt.strftime("%d/%m/%Y %H:%M")
+    criado_em = tabela["criado_em"]
+    criado_em = pd.to_datetime(criado_em, errors="coerce")
+    if criado_em.dt.tz is None:
+        criado_em = criado_em.dt.tz_localize("UTC")
+    tabela["criado_em"] = criado_em.dt.tz_convert("America/Recife").dt.strftime("%d/%m/%Y %H:%M")
 
     ultimo = tabela.iloc[0]
     c1, c2, c3, c4 = st.columns(4)
