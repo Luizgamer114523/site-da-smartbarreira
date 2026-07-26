@@ -1,0 +1,14 @@
+[theme]
+base = "dark"                        # tema base: "light" ou "dark"
+primaryColor = "#ff4b4b"             # cor de destaque (botões, links, seleções)
+backgroundColor = "#0e1117"          # fundo principal
+secondaryBackgroundColor = "#262730" # sidebar e widgets
+textColor = "#fafafa"                # cor do texto
+font = "Audiowide:https://fonts.googleapis.com/css2?family=Audiowide&display=swap"                  # "sans serif", "serif" ou "monospace"
+linkColor = "#0068c9"
+codeBackgroundColor = "#f0f2f6"
+headingFont = "Audiowide:https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+codeFont = "monospace"
+baseRadius = "0.5rem"                # arredondamento de bordas
+borderColor = "#d3d3d3"
+showWidgetBorder = true
