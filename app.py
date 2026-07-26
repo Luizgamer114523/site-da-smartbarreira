@@ -25,5 +25,5 @@ else:
     c4.metric("Temperatura", f"{ultimo['temperatura']} C")
     
 st.subheader("Historico do pH")
-grafico = tabela.set_index("criado_em")["ph"]
+grafico = tabela.set_index("criado_em")["ph", "turbidez", "tds", "temperatura"]
 st.line_chart(grafico)
