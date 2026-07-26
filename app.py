@@ -31,10 +31,10 @@ else:
     st.subheader("Historico do pH")
     grafico = tabela.set_index("criado_em")[["ph", "turbidez", "tds", "temperatura"]]
     st.line_chart(grafico)
-    st.table(tabela[["ph", "turbidez", "tds", "temperatura", "criado_em"]]).rename(columns={
+    st.table(tabela[["ph", "turbidez", "tds", "temperatura", "criado_em"]].rename(columns={
         "ph": "pH",
         "turbidez": "Turbidez", 
         "tds": "Qualidade da Agua",
         "temperatura": "Temperatura",
         "criado_em": "Data/Hora",
-    })
+    }))
