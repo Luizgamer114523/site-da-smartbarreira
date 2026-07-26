@@ -35,6 +35,6 @@ else:
         "ph": "pH",
         "turbidez": "Turbidez", 
         "tds": "Qualidade da Agua",
-        "temperatura": "Temperatura"
+        "temperatura": "Temperatura",
         "criado_em": "Data/Hora",
-    })) 
+    })
