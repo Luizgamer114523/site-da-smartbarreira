@@ -32,9 +32,9 @@ else:
     grafico = tabela.set_index("criado_em")[["ph", "turbidez", "tds", "temperatura"]]
     st.line_chart(grafico)
     st.table(tabela[["criado_em", "ph", "turbidez", "tds", "temperatura"]].rename(columns={
-        "criado_em": "Data/Hora",
         "ph": "pH",
         "turbidez": "Turbidez", 
         "tds": "Qualidade da Agua",
         "temperatura": "Temperatura"
+        "criado_em": "Data/Hora",
     })) 
