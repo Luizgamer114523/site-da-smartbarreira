@@ -7,9 +7,9 @@ def buscar_exames() -> pd.DataFrame:
     resposta = requests.get(URL_API)
     return pd.DataFrame(resposta.json())
 
-st.set_page_config(page_title="AquaBarreira", page_icon="💧")
+st.set_page_config(page_title="smartbarreira", page_icon="💧")
 
-st.title("Painel da AquaBarreira")
+st.title("Painel da SmartBarreira")
 tabela = buscar_exames()
 if tabela.empty:
     st.info("Ainda nao chegaram exames da agua...")
